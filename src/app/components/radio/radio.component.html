@@ -1,0 +1,11 @@
+<input
+  [class]="inputClass"
+  type="radio"
+  [value]="value"
+  (input)="onInput($event)"
+>
+<label
+  [for]="inputName"
+  [class]="labelClass">
+  {{ label }}
+</label>
