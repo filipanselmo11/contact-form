@@ -18,9 +18,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@a
   styleUrl: './radio.component.css'
 })
 export class RadioComponent implements ControlValueAccessor {
-  @Input('id') id!: string;
   @Input('input-class') inputClass!: string;
-  @Input('name') name!: string;
   @Input('input-name') inputName!: string;
   @Input('label-class') labelClass!: string;
   @Input('label') label!: string;
