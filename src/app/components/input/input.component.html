@@ -1,0 +1,11 @@
+<label
+  [for]="inputName"
+  [class]="labelClass">
+  {{ label }}
+</label>
+<input
+  [class]="inputClass"
+  [type]="inputType"
+  [value]="value"
+  (input)="onInput($event)"
+/>
