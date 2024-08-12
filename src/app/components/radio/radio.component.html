@@ -1,11 +1,12 @@
 <input
+  [id]="inputName"
   [class]="inputClass"
   type="radio"
   [value]="value"
   (input)="onInput($event)"
 >
 <label
-  [for]="inputName"
+  [htmlFor]="inputName"
   [class]="labelClass">
   {{ label }}
 </label>

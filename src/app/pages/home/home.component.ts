@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputComponent } from '../../components/input/input.component';
 import { RadioComponent } from '../../components/radio/radio.component';
+import { TextareaComponent } from '../../components/textarea/textarea.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { RadioComponent } from '../../components/radio/radio.component';
     CardComponent,
     ReactiveFormsModule,
     InputComponent,
-    RadioComponent
+    RadioComponent,
+    TextareaComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
