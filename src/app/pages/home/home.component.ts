@@ -28,8 +28,7 @@ export class HomeComponent {
       firstName: new FormControl('', [Validators.required]),
       lastName: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      generalEnquiry: new FormControl('', [Validators.required]),
-      supportRequest: new FormControl('', [Validators.required]),
+      queryType: new FormControl('', [Validators.required]),
       message: new FormControl('', [Validators.required])
     });
   }

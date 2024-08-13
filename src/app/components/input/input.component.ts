@@ -19,6 +19,8 @@ export type InputTypes = "email" | "text" | "password" | "radio" | "checkbox";
   templateUrl: './input.component.html',
   styleUrl: './input.component.css'
 })
+
+
 export class InputComponent implements ControlValueAccessor {
 
   @Input('input-name')inputName!: string;
@@ -36,6 +38,7 @@ export class InputComponent implements ControlValueAccessor {
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.onChange(value);
+    this.onTouched();
   }
 
   writeValue(value: any): void {
@@ -46,7 +49,9 @@ export class InputComponent implements ControlValueAccessor {
     this.onChange = fn
   }
 
-  registerOnTouched(fn: any): void { }
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
 
   setDisabledState(isDisabled: boolean): void { }
 
