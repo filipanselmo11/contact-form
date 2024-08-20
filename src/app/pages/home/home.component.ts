@@ -3,7 +3,6 @@ import { CardComponent } from '../../components/card/card.component';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputComponent } from '../../components/input/input.component';
-import { RadioComponent } from '../../components/radio/radio.component';
 import { TextareaComponent } from '../../components/textarea/textarea.component';
 
 @Component({
@@ -14,7 +13,6 @@ import { TextareaComponent } from '../../components/textarea/textarea.component'
     CardComponent,
     ReactiveFormsModule,
     InputComponent,
-    RadioComponent,
     TextareaComponent
   ],
   templateUrl: './home.component.html',

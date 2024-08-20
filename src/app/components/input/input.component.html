@@ -1,11 +1,31 @@
-<label
-  [for]="inputName"
-  [class]="labelClass">
-  {{ label }}
-</label>
-<input
-  [class]="inputClass"
-  [type]="inputType"
-  [value]="value"
-  (input)="onInput($event)"
-/>
+<div *ngIf="inputType === 'radio'">
+  <input
+    [id]="inputName"
+    [class]="inputClass"
+    type="radio"
+    [value]="value"
+    [checked]="value === currentValue"
+    (change)="onInputRadio($event)" />
+  <span [class]="spanClass">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-3.5 w-3.5"
+      viewBox="0 0 16 16"
+      fill="currentColor">
+      <circle data-name="ellipse" cx="8" cy="8" r="8">
+      </circle>
+    </svg>
+  </span>
+  <label [htmlFor]="inputName" [class]="labelClass">
+    {{ label }}
+  </label>
+</div>
+<div *ngIf="inputType === 'checkbox'">
+  <h1>olá eu sou um checkbox</h1>
+</div>
+<div #elseblock>
+  <label [for]="inputName" [class]="labelClass">
+    {{ label }}
+  </label>
+  <input [class]="inputClass" [type]="inputType" [value]="value" (input)="onInput($event)" />
+</div>

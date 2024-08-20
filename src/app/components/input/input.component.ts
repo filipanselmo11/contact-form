@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 
@@ -7,7 +8,8 @@ export type InputTypes = "email" | "text" | "password" | "radio" | "checkbox";
   selector: 'app-input',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [
     {
@@ -27,16 +29,25 @@ export class InputComponent implements ControlValueAccessor {
   @Input('label-class')labelClass!: string;
   @Input('label')label!: string;
   @Input('input-class')inputClass!: string;
-  // @Input('placeholder')placeholder!: string;
+  @Input('radio-value') radioValue!: string;
+  @Input('span-class') spanClass!: string;
   @Input('input-type')inputType: InputTypes = "text";
 
   value!: string;
+  currentValue!: string;
 
   onChange: any = () => { };
   onTouched: any = () => { };
 
   onInput(event: Event) {
     const value = (event.target as HTMLInputElement).value;
+    this.onChange(value);
+    this.onTouched();
+  }
+
+  onInputRadio(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.currentValue = value;
     this.onChange(value);
     this.onTouched();
   }
