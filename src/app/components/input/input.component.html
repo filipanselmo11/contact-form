@@ -1,17 +1,8 @@
 <div *ngIf="inputType === 'radio'">
-  <input
-    [id]="inputName"
-    [class]="inputClass"
-    type="radio"
-    [value]="value"
-    [checked]="value === currentValue"
+  <input [id]="inputName" [class]="inputClass" type="radio" [value]="value" [checked]="value === currentValue"
     (change)="onInputRadio($event)" />
   <span [class]="spanClass">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-3.5 w-3.5"
-      viewBox="0 0 16 16"
-      fill="currentColor">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 16 16" fill="currentColor">
       <circle data-name="ellipse" cx="8" cy="8" r="8">
       </circle>
     </svg>
@@ -21,7 +12,21 @@
   </label>
 </div>
 <div *ngIf="inputType === 'checkbox'">
-  <h1>olá eu sou um checkbox</h1>
+  <input />
+  <label [class]="labelClass" [htmlFor]="inputName">
+    <input [id]="inputName" type="checkbox" [class]="inputClass" />
+    <span [class]="spanClass">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor"
+        stroke="currentColor" stroke-width="1">
+        <path fill-rule="evenodd"
+          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </span>
+  </label>
+  <label [class]="labelClass2" [htmlFor]="inputName">
+    {{ label }}
+  </label>
 </div>
 <div #elseblock>
   <label [for]="inputName" [class]="labelClass">

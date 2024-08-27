@@ -3,32 +3,20 @@
     <form [formGroup]="contactForm">
       <div class="grid grid-cols-2 gap-4">
         <div id="first-name">
-          <app-input
-          formControlName="firstName"
-          input-name="firstName"
-          input-type="text"
-          label="First Name *"
-          input-class="peer h-9 w-full rounded-[7px] border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-          label-class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-        </app-input>
+          <app-input formControlName="firstName" input-name="firstName" input-type="text" label="First Name *"
+            input-class="peer h-9 w-full rounded-[7px] border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+            label-class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
+          </app-input>
         </div>
         <div id="last-name">
-          <app-input
-          formControlName="lastName"
-          input-name="lastName"
-          input-type="text"
-          label="Last Name *"
-          input-class="peer h-9 w-full rounded-[7px] border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-          label-class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
-        </app-input>
+          <app-input formControlName="lastName" input-name="lastName" input-type="text" label="Last Name *"
+            input-class="peer h-9 w-full rounded-[7px] border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+            label-class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
+          </app-input>
         </div>
       </div>
       <div id="email">
-        <app-input
-          formControlName="email"
-          input-name="email"
-          input-type="email"
-          label="Email *"
+        <app-input formControlName="email" input-name="email" input-type="email" label="Email *"
           input-class="peer h-9 w-full rounded-[7px] border border-blue-gray-200 border-t-transparent !border-t-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-gray-900 focus:border-t-transparent focus:!border-t-gray-900 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           label-class="block mt-2 mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
         </app-input>
@@ -40,34 +28,39 @@
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div id="radio-1">
-          <app-input
-            formControlName="queryType"
-            input-name="generalEnquiry"
-            [radio-value]="'generalEnquiry'"
+          <app-input formControlName="queryType" input-name="generalEnquiry" [radio-value]="'generalEnquiry'"
             label="General Enquiry"
             input-class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
             label-class="mt-px font-light text-gray-700 cursor-pointer select-none"
             span-class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"></app-input>
         </div>
         <div id="radio-2">
-          <app-input
-            formControlName="queryType"
-            input-name="supportRequest"
-            [radio-value]="'supportRequest'"
+          <app-input formControlName="queryType" input-name="supportRequest" [radio-value]="'supportRequest'"
             label="Support Request"
             input-class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-full border border-blue-gray-200 text-gray-900 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
             label-class="mt-px font-light text-gray-700 cursor-pointer select-none"
-            span-class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"
-            ></app-input>
+            span-class="absolute text-gray-900 transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"></app-input>
         </div>
       </div>
       <div id="message">
-        <app-textarea
-          formControlName="message"
-          label="Message *"
+        <app-textarea formControlName="message" label="Message *"
           label-class="block mt-2 mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900"
           input-class="peer h-full min-h-[100px] w-full resize-none rounded-[7px] border border-blue-gray-200 px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all">
         </app-textarea>
+      </div>
+      <!-- <div id="check">
+        <app-input formControlName="checked" input-name="agree" label="I consent to being contacted by the team *"
+          input-class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-blue-gray-200 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-gray-900 checked:bg-gray-900 checked:before:bg-gray-900 hover:before:opacity-10"
+          label-class="relative flex items-center p-3 rounded-full cursor-pointer"
+          label-class-2="mt-px font-light text-gray-700 cursor-pointer select-none"
+          span-class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100"></app-input>
+      </div> -->
+      <div id="button">
+        <app-button
+          button-class="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-green-900 text-white shadow-md shadow-green-900/10 hover:shadow-lg hover:shadow-green-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none block w-full"
+          (button-click)="submitForm()">
+            Submit
+        </app-button>
       </div>
     </form>
   </app-card>

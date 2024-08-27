@@ -27,6 +27,7 @@ export class InputComponent implements ControlValueAccessor {
 
   @Input('input-name')inputName!: string;
   @Input('label-class')labelClass!: string;
+  @Input('label-class-2')labelClass2!: string;
   @Input('label')label!: string;
   @Input('input-class')inputClass!: string;
   @Input('radio-value') radioValue!: string;
